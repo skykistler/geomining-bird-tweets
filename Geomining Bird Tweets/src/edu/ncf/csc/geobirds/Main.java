@@ -33,7 +33,7 @@ public class Main {
 		int records = 0;
 		PrintWriter print = new PrintWriter("egyptiangoosetweets.csv");
 		for (BirdTweet bt : tweets) {
-			if (bt.tweet.getGeoLocation() != null) {
+			if (bt.tweet.getGeoLocation() != null && bt.tweet.getGeoLocation().getLatitude() != 0) {
 				print.println(records + "," + bt);
 				records++;
 				System.out.println(bt);
